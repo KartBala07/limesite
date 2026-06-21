@@ -7,7 +7,7 @@
 <meta name="description" content="FRC Team 1678 — Citrus Circuits. Engineering, fabricating, and competing from Davis, California.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/three@r128/examples/js/loaders/GLTFLoader.js"></script>
 <style>
@@ -16,7 +16,7 @@
 html{scroll-behavior:smooth}
 body{
   background:var(--bg-darkest);color:var(--text-main);
-  font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden;cursor:none;
   transition:background-color .3s ease,color .3s ease;
   -webkit-font-smoothing:antialiased;
 }
@@ -26,7 +26,7 @@ ul{list-style:none}
 
 /* === VARIABLES (mapped to Limesite_bala palette) === */
 :root[data-theme="dark"]{
-  --lime:#7FFF00;        --lime-soft:#cfff6a;
+  --lime:#3CD52E;        --lime-soft:#7fe676;
   --bg-darkest:#050606;  --bg-dark:#0b0d0d;
   --bg-card:#111414;     --bg-dropdown:#121616;
   --text-main:#f3f4f6;   --text-muted:#9ca3af;
@@ -35,7 +35,7 @@ ul{list-style:none}
   --invert-logos:invert(0);
 }
 :root[data-theme="light"]{
-  --lime:#4ebd00;        --lime-soft:#86d620;
+  --lime:#3CD52E;        --lime-soft:#2fa824;
   --bg-darkest:#f9fafb;  --bg-dark:#f3f4f6;
   --bg-card:#ffffff;     --bg-dropdown:#ffffff;
   --text-main:#111827;   --text-muted:#4b5563;
@@ -53,10 +53,10 @@ ul{list-style:none}
 #loader.out{opacity:0;visibility:hidden;pointer-events:none}
 .ld-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(100px,20vw,220px);color:transparent;-webkit-text-stroke:2px var(--lime);letter-spacing:.04em;line-height:1;animation:ldGl 1.5s ease-in-out infinite}
 .ld-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:.3em;text-transform:uppercase;margin-top:16px;opacity:.7}
-.ld-bw{width:160px;height:1px;background:rgba(127,255,0,.2);margin-top:28px;overflow:hidden}
+.ld-bw{width:160px;height:1px;background:rgba(60,213,46,.2);margin-top:28px;overflow:hidden}
 .ld-b{height:100%;background:var(--lime);animation:ldB 2s ease-out forwards}
 @keyframes ldB{0%{width:0}100%{width:100%}}
-@keyframes ldGl{0%,100%{filter:drop-shadow(0 0 14px rgba(127,255,0,.4))}50%{filter:drop-shadow(0 0 44px rgba(127,255,0,.95))}}
+@keyframes ldGl{0%,100%{filter:drop-shadow(0 0 14px rgba(60,213,46,.4))}50%{filter:drop-shadow(0 0 44px rgba(60,213,46,.95))}}
 
 /* === NAV (Limesite_bala style) === */
 header{
@@ -117,9 +117,9 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
 @keyframes fuA{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
 /* === BTN === */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:all .25s;cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;transition:all .25s;cursor:pointer;border:none}
 .btn-solid{background:var(--lime);color:#000;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)}
-.btn-solid:hover{background:var(--lime-soft);transform:translateY(-2px);box-shadow:0 8px 28px rgba(127,255,0,.35)}
+.btn-solid:hover{background:var(--lime-soft);transform:translateY(-2px);box-shadow:0 8px 28px rgba(60,213,46,.35)}
 .btn-ghost{color:var(--text-main);border:1px solid var(--border)}
 .btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
 
@@ -128,7 +128,7 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
   position:relative;width:100%;height:520px;
   background:linear-gradient(180deg,#0a0d0a 0%,#050a05 100%);
   border:1px solid var(--border);border-radius:20px;overflow:hidden;
-  box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 0 1px rgba(127,255,0,.04) inset;
+  box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 0 1px rgba(60,213,46,.04) inset;
   cursor:grab;user-select:none;touch-action:none;
   opacity:0;animation:fuA .9s 2.9s forwards;
 }
@@ -136,8 +136,8 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
 .cad-stage::before{
   content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(127,255,0,.035) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(127,255,0,.035) 1px,transparent 1px);
+    linear-gradient(rgba(60,213,46,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(60,213,46,.035) 1px,transparent 1px);
   background-size:40px 40px;pointer-events:none;
 }
 .cad-frame{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
@@ -152,10 +152,10 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
 .cad-progress{position:absolute;bottom:54px;left:50%;transform:translateX(-50%);width:160px;height:1px;background:var(--border);z-index:2;overflow:hidden}
 .cad-progress-fill{height:100%;background:var(--lime);width:0;transition:width .12s linear}
 .cad-placeholder{text-align:center;color:var(--text-muted);max-width:360px;padding:1.5rem}
-.cad-placeholder img{height:84px;width:auto;margin:0 auto 18px;filter:drop-shadow(0 0 24px rgba(127,255,0,.18))}
+.cad-placeholder img{height:84px;width:auto;margin:0 auto 18px;filter:drop-shadow(0 0 24px rgba(60,213,46,.18))}
 .cad-placeholder h4{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em;color:var(--lime);margin-bottom:10px}
 .cad-placeholder p{font-size:13px;line-height:1.7;color:var(--text-muted)}
-.cad-placeholder code{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--lime);background:rgba(127,255,0,.08);padding:2px 6px;border-radius:4px}
+.cad-placeholder code{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--lime);background:rgba(60,213,46,.08);padding:2px 6px;border-radius:4px}
 
 /* === MARQUEE === */
 .mq-strip{overflow:hidden;background:var(--lime);padding:13px 0}
@@ -169,7 +169,7 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
 .st-in{max-width:1440px;margin:0 auto;padding:0 60px;display:grid;grid-template-columns:repeat(4,1fr)}
 .st-cell{padding:56px 20px;text-align:center;border-right:1px solid var(--border)}
 .st-cell:last-child{border-right:none}
-.st-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,6vw,96px);color:var(--lime);line-height:1;display:flex;align-items:baseline;justify-content:center;gap:2px;text-shadow:0 0 50px rgba(127,255,0,.25)}
+.st-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,6vw,96px);color:var(--lime);line-height:1;display:flex;align-items:baseline;justify-content:center;gap:2px;text-shadow:0 0 50px rgba(60,213,46,.25)}
 .st-plus{color:var(--lime-soft);font-size:.72em}
 .st-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.2em;text-transform:uppercase;margin-top:8px}
 
@@ -182,7 +182,7 @@ h1.htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,9.5vw,168px);
 .content-stack{max-width:1440px;margin:0 auto;padding:5rem 2rem 2rem}
 .content-header{margin-bottom:3.5rem}
 .content-header .tag{font-family:'JetBrains Mono',monospace;color:var(--lime);font-size:.85rem;text-transform:uppercase;letter-spacing:3px;display:block;margin-bottom:1rem}
-.content-header h1{font-family:'Inter',sans-serif;font-size:3.5rem;font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
+.content-header h1{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:3.5rem;font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
 .content-header p{color:var(--text-muted);font-size:1.2rem;line-height:1.6;max-width:720px}
 
 /* === ACTION PANEL GRID === */
@@ -214,7 +214,7 @@ footer{background:var(--bg-dark);border-top:1px solid var(--border);padding:5rem
 .footer-grid{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1.5fr;gap:4rem;align-items:flex-start;padding-bottom:4rem;border-bottom:1px solid var(--border)}
 .footer-left{display:flex;flex-direction:column;gap:1.5rem}
 .footer-search{background:var(--bg-darkest);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;width:100%;max-width:320px}
-.footer-search input{background:transparent;border:none;outline:none;color:var(--text-main);font-size:.9rem;width:100%;margin-left:.5rem;font-family:'Inter',sans-serif}
+.footer-search input{background:transparent;border:none;outline:none;color:var(--text-main);font-size:.9rem;width:100%;margin-left:.5rem;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
 .footer-search svg{flex-shrink:0}
 .footer-left p{color:var(--text-muted);font-size:.9rem}
 .footer-left a{color:var(--lime);text-decoration:none;font-size:.9rem}
@@ -628,7 +628,7 @@ function draw(){
         } else {
           ctx.lineTo(m.x,m.y);
         }
-        ctx.strokeStyle=`rgba(127,255,0,${a})`;
+        ctx.strokeStyle=`rgba(60,213,46,${a})`;
         ctx.lineWidth=.55;
         ctx.stroke();
       }
@@ -636,7 +636,7 @@ function draw(){
     const alpha=n.a*(.6+.4*Math.sin(n.p));
     ctx.beginPath();
     ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(127,255,0,${alpha})`;
+    ctx.fillStyle=`rgba(60,213,46,${alpha})`;
     ctx.fill();
   }
   requestAnimationFrame(draw);
