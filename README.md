@@ -32,27 +32,24 @@ pages/                     # site root (served by GitHub Pages)
 ├── blog/                  # build blogs / newsletters
 │   └── blog_<year>.html              (2022–2025)
 │
-└── pictures/              # images, grouped by subject
-    ├── robots/            # robot photos + CAD renders
-    ├── people/            # leadership/team member headshots
-    ├── sponsors/          # sponsor & partner logos
-    ├── 2026/              # current-season build/pit/scouting photos
-    └── site/              # logos, favicons, event covers, misc UI images
+└── pictures/              # images grouped by subject
+    ├── robots/            # robot hero + CAD shots (2009–2026)
+    ├── people/            # captains, members, team photos
+    ├── sponsors/          # sponsor logos
+    ├── 2026/              # current-season build photos
+    └── site/              # logos, favicons, page covers, misc
 ```
 
-The page folders mirror the site's navigation: pages live next to the nav
-section they belong to. `index.html` and a few standalone pages stay at the
-root. `pictures/` is grouped by subject instead, since images are shared
-across many pages rather than belonging to one nav section.
+The folders mirror the site's navigation: pages live next to the nav section
+they belong to. `index.html` and a few standalone pages stay at the root.
 
 ## Conventions
 
 - **No build step.** Every page is plain HTML with an inline `<style>` block;
   open any file directly in a browser to preview it.
 - **Relative links.** Pages reference each other and images with paths relative
-  to their own folder — siblings by bare name, other folders via `../`, and
-  images via `pictures/<subject>/<file>` (or `../pictures/<subject>/<file>`
-  from a nested folder).
+  to their own folder — siblings by bare name, other folders and `pictures/`
+  via `../`.
 - **Theming.** Colors are driven by CSS variables on `:root[data-theme]`
   (dark/light), toggled by the theme button and persisted in `localStorage`.
 - **Robot pages** share a common layout: a hero image, detail sections
