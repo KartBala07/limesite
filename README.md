@@ -32,7 +32,12 @@ pages/                     # site root (served by GitHub Pages)
 ├── blog/                  # build blogs / newsletters
 │   └── blog_<year>.html              (2022–2025)
 │
-└── pictures/              # all images (robots, people, logos, covers)
+└── pictures/              # images grouped by subject
+    ├── robots/            # robot hero + CAD shots (2009–2026)
+    ├── people/            # captains, members, team photos
+    ├── sponsors/          # sponsor logos
+    ├── 2026/              # current-season build photos
+    └── site/              # logos, favicons, page covers, misc
 ```
 
 The folders mirror the site's navigation: pages live next to the nav section
