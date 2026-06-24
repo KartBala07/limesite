@@ -15,14 +15,14 @@ import { getFirestore, doc, setDoc, getDoc, collection, addDoc,
   serverTimestamp, query, where, orderBy, getDocs, limit, increment, updateDoc, deleteDoc }
   from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
-// ⚠️ Replace every value below with your Firebase project's config
 export const firebaseConfig = {
-  apiKey:            "YOUR_API_KEY",
-  authDomain:        "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId:         "YOUR_PROJECT_ID",
-  storageBucket:     "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId:             "YOUR_APP_ID"
+  apiKey:            "AIzaSyBwG3sa6MOfOIVzf7hBmGxstF7Iq92aF_Y",
+  authDomain:        "limesite-1678.firebaseapp.com",
+  projectId:         "limesite-1678",
+  storageBucket:     "limesite-1678.firebasestorage.app",
+  messagingSenderId: "23451639496",
+  appId:             "1:23451639496:web:253cee0b0ef778b5e98ffd",
+  measurementId:     "G-0QW7YZVKF6"
 };
 
 // ⚠️ Replace with your own Firebase UID (shown on /admin page after first login)
