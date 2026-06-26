@@ -390,7 +390,8 @@ footer{background:var(--bg-dark);border-top:1px solid var(--border);padding:5rem
   nm.querySelectorAll('.nav-item').forEach(function(item){
     var lk=item.querySelector('.nav-link');
     if(lk&&item.querySelector('.dropdown-panel')){
-      lk.addEventListener('click',function(e){if(window.innerWidth<=1100){e.preventDefault();item.classList.toggle('open');}});
+      var sv=lk.querySelector('svg');
+      if(sv){sv.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();item.classList.toggle('open');});}
     }
   });
 })();
