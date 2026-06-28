@@ -615,9 +615,7 @@ document.querySelectorAll('a,button,.resource-card,.action-btn,.nav-cta').forEac
 (function(){
   var dismissed=false;
   function dismiss(){if(dismissed)return;dismissed=true;document.getElementById('loader').classList.add('out');}
-  var vid=document.querySelector('.ld-vid');
-  if(vid){vid.addEventListener('ended',dismiss);}
-  setTimeout(dismiss,10000);
+  setTimeout(dismiss,3000);
 })();
 
 /* === THEME TOGGLE === */
